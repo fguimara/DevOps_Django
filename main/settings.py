@@ -96,6 +96,19 @@ DATABASES = {
     }
 }
 
+if os.environ.get('DJANGO_DEPLOY_SETTINGS') == 'stage':
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'HOST': 'localhost',
+            'NAME': 'tutorial',
+            'USER': 'tutorial',
+            'PASSWORD': 'Tutorial01',
+        }
+    }   
+    
+    
+    
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators

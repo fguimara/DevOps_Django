@@ -7,3 +7,4 @@ pylint-django==2.0.6
 pylint-plugin-utils==0.5
 sentry-sdk==0.7.9
 coverage
+psycopg2

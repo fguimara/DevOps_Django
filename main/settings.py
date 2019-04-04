@@ -96,7 +96,7 @@ DATABASES = {
     }
 }
 
-if os.environ['DJANGO_DEPLOY_SETTINGS'] == 'stage':
+if os.environ.get('DJANGO_DEPLOY_SETTINGS') == 'stage':
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
